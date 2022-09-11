@@ -1,0 +1,189 @@
+
+// global 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    text-decoration: none;
+}
+
+
+// mixins
+@mixin flex ($justify, $align, $direction, $gap){
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	flex-direction: $direction;
+    gap: $gap	
+}
+
+@mixin media ($breakpoint){
+    @media(max-width:$breakpoint){
+        @content;
+    }
+}
+
+
+// vars
+$yellow: #ffd504;
+$white: white;
+$yellow-hover:#bba711;
+$black: black;
+
+
+// custom classes
+.mb-30px {
+    margin-bottom: 30px;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+
+// ----------------------
+// ---- ACTUAL CODE -----
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    @include media (1024px){
+        flex-direction: column;
+    }
+}
+
+
+// left side
+.left {
+    flex-basis: 43%;
+    flex-grow: 1;
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    color: $white;
+
+    &__header {
+        width: 100%;
+        @include flex(space-between, center, row, 0);
+
+        &__logo {
+            width: 8rem;
+        }
+
+        &__instagram__icon {
+            padding: 0.5rem;
+            color: $yellow;
+            transition: 0.2s ease-in;
+            
+            &:hover {
+                color: $yellow-hover;
+            }
+        }
+    }
+    
+    &__text {
+         width: 80%;
+         margin: 7rem auto 3rem;
+
+         h1 {
+             font-size: 4rem;
+             font-family: 'Koulen';
+             line-height: 5rem;
+         }
+
+         p {
+             line-height: 1.5rem;
+             margin: 1rem 0;
+         }
+
+         a {
+            @include flex(start, center, row, 2rem);
+             color: $yellow;
+             margin-top: 30px;
+             border: 2px solid $yellow;
+             width: fit-content;
+             padding: 0.7rem;
+             border-radius: 15px;
+             transition: transform 0.5s;
+
+             &:hover {
+                 transform: translate(20px);
+             }
+         }
+    }
+}
+
+
+// right side
+.right {
+    flex-basis: 57%;
+    flex-grow: 1;
+    padding: 40px 80px;
+    background-color: $white;
+    @include media (640px){
+        padding: 40px;
+    }
+    
+    ul{
+        @include flex(space-between, center, row, 0);
+        list-style-type: none;
+        flex-wrap: wrap;
+        margin: 1.3rem 0 100px 0;
+        
+        
+
+        li a {
+            color: gray;
+            font-weight: 600;
+            transition: 0.2s ease-in;
+            padding: 0.5rem;
+
+            &:hover {
+                color: $black;
+            }
+        }
+
+        li .right__btn {
+           border: 3px solid $yellow;
+           padding: 10px 30px; 
+           border-radius: 15px;
+
+           &:hover {
+               background-color: $yellow;
+           }
+        }
+    }
+
+    &__text {
+        margin-top: 7rem;
+
+        h2 {
+            font-size: 3rem;
+            font-family: 'Koulen';
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        a {
+            display: inline-block;
+            color: $black;
+            padding: 15px 20px;
+            border-radius: 6px;
+            box-shadow: 0 5px 10px lightgray;
+            transition: transform 0.5s;
+            background-color: $yellow;
+
+            &:hover {
+                transform: translate(20px);
+            }
+        }
+    }
+}
+

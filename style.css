@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans';
+  text-decoration: none;
+}
+
+.mb-30px {
+  margin-bottom: 30px;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.left {
+  -ms-flex-preferred-size: 43%;
+      flex-basis: 43%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-image: url(./images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  color: white;
+}
+
+.left__header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+.left__header__logo {
+  width: 8rem;
+}
+
+.left__header__instagram__icon {
+  padding: 0.5rem;
+  color: #ffd504;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.left__header__instagram__icon:hover {
+  color: #bba711;
+}
+
+.left__text {
+  width: 80%;
+  margin: 7rem auto 3rem;
+}
+
+.left__text h1 {
+  font-size: 4rem;
+  font-family: 'Koulen';
+  line-height: 5rem;
+}
+
+.left__text p {
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.left__text a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2rem;
+  color: #ffd504;
+  margin-top: 30px;
+  border: 2px solid #ffd504;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.7rem;
+  border-radius: 15px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.left__text a:hover {
+  -webkit-transform: translate(20px);
+          transform: translate(20px);
+}
+
+.right {
+  -ms-flex-preferred-size: 57%;
+      flex-basis: 57%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 40px 80px;
+  background-color: white;
+}
+
+@media (max-width: 640px) {
+  .right {
+    padding: 40px;
+  }
+}
+
+.right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  list-style-type: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1.3rem 0 100px 0;
+}
+
+.right ul li a {
+  color: gray;
+  font-weight: 600;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  padding: 0.5rem;
+}
+
+.right ul li a:hover {
+  color: black;
+}
+
+.right ul li .right__btn {
+  border: 3px solid #ffd504;
+  padding: 10px 30px;
+  border-radius: 15px;
+}
+
+.right ul li .right__btn:hover {
+  background-color: #ffd504;
+}
+
+.right__text {
+  margin-top: 7rem;
+}
+
+.right__text h2 {
+  font-size: 3rem;
+  font-family: 'Koulen';
+}
+
+.right__text h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.right__text a {
+  display: inline-block;
+  color: black;
+  padding: 15px 20px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px lightgray;
+          box-shadow: 0 5px 10px lightgray;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  background-color: #ffd504;
+}
+
+.right__text a:hover {
+  -webkit-transform: translate(20px);
+          transform: translate(20px);
+}
+/*# sourceMappingURL=style.css.map */
